@@ -24,20 +24,41 @@
             "image": "/svg/Code Version Control.svg", 
             "imagePosition": "right",
             "content":{
+<<<<<<< HEAD
                 "title": "A critical function...",
                 "text1": "Software Testing is a critical function within businesses and Software testers play a critical role in application development. They are quality assurance experts who put applications through the wringer to root out bugs, poor performance and interface issues.",
                 "text2": "A career in software testing is very challenging but satisfying, requiring you to problem solve, manage risk and improve the quality of all phases of the software development cycle."
+=======
+                "title": "Writing concisely and clearly takes time...",
+                "text1": "Writing concisely and clearly takes time. You have to work out exactly what your audience wants to know in order to make sure you are writing relevant information.  There is no set formula for writing a report – every report is different. Each one depends on what the purpose is, who you are writing for and the kind of information that you are reporting.",
+                "text2": "The keys to writing good reports are:",
+                "list":[
+                    "Understanding the types of writing a report involves.", 
+                    "Being able to identify the audience and purpose of your report.", 
+                    "Knowing how reports are read by your audience.", 
+                    "Knowing the purpose of each section in a report (not just where the information goes).", 
+                    "Understanding how good organisation of your report helps the reader find the information they want.", 
+                    "Being able to communicate well both in writing  and using graphical data."
+                ]
+
+>>>>>>> 597d7cc0230281e7432f420b6786154ecaf1a57d
             }
         },
         {
             "id": "summary",
             "link": "/#summary", 
+<<<<<<< HEAD
             "text": "Why Attend?", 
             "title": "Why Attend?", 
+=======
+            "text": "What to Expect", 
+            "title": "What to Expect", 
+>>>>>>> 597d7cc0230281e7432f420b6786154ecaf1a57d
             "type": "summary",
             "image": "", 
             "imagePosition": "right",
             "content":{
+<<<<<<< HEAD
                 "title": "Why attend one of our Software Testing courses?",
                 "text1": "For certified or customised courses, we have expert trainers. <a href=/courses>Our courses</a> are practical, with many example programmes and tests to quickly bring you up to speed in software testing testing.",
                 "text2": "From the outset, our participants learn to:",
@@ -51,7 +72,22 @@
                     "Assist in the selection and implementation process of testing tools"
                 ],
                 "text3": "We also offer advanced training for experienced sales people responsible for managing, retaining and expanding business with key accounts. If there is a newly recruited field or office-based salesperson that requires an initial training support programme to accelerate their performance, then we have the answer."
+=======
+                "title": "What to expect from one of our Facilitation Skills courses?",
+                "text1": "<a href=/courses>Our programmes</a> are designed for people who regularly write reports as part of their job. It will help to refresh their existing skills and introduce some new techniques and concepts. The value of the session is enhanced if the participants bring some sample documents.  Participants should be familiar with the basics of report writing and have created a number of reports.  Our courses are also suitable for more experienced report writers who may be self-taught, never having received any formal training.",
+
+                "text2": "Having completed our training the participants will:",
+                "list":[
+                    "Understand that professional writing is a career skill.", 
+                    "Understand the importance of knowing their audience.", 
+                    "Write in a context where the report may be read by an outside third party.", 
+                    "Write clear and concise sentences.", 
+                    "Have a clear understanding of the features of an effective report.", 
+                    "Know how to use tables, charts and diagrams to illustrate key points.",
+                    "Have practiced the techniques and created an action plan to apply them."
+                ]
+>>>>>>> 597d7cc0230281e7432f420b6786154ecaf1a57d
             }
-        }
+        } 
     ] 
 }
