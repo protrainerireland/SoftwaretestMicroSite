@@ -1,12 +1,12 @@
 {
     "searchKeywords": ["Javascript"],
     "searchLocations": ["Dublin", "Cork", "Limerick", "Ireland"],
-    "homepageTitle": "Training Courses - Dublin Cork Limerick Ireland", 
+    "homepageTitle": "Software Testing Training Courses - Dublin Cork Limerick Ireland", 
     "organisation": {
-        "name": "AngularTraining.ie" 
+        "name": "SoftwareTestingTraining.ie" 
     },
-    "url": "angulartraining.ie",
-    "logo": "/img/javascriptlogo.png",
+    "url": "softwaretestingtraining.ie",
+    "logo": "",
     "address": {
         "line1": "Building 6500E", 
         "line2": "Cork Airport Business Park", 
