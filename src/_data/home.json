@@ -25,8 +25,10 @@
             "imagePosition": "right",
             "content":{
                 "title": "A critical function...",
-                "text1": "Software Testing is a critical function within businesses and Software testers play a critical role in application development. They are quality assurance experts who put applications through the wringer to root out bugs, poor performance and interface issues.",
-                "text2": "A career in software testing is very challenging but satisfying, requiring you to problem solve, manage risk and improve the quality of all phases of the software development cycle."
+                "text":[
+                    "Software Testing is a critical function within businesses and Software testers play a critical role in application development. They are quality assurance experts who put applications through the wringer to root out bugs, poor performance and interface issues.",
+                    "A career in software testing is very challenging but satisfying, requiring you to problem solve, manage risk and improve the quality of all phases of the software development cycle."
+                ] 
             }
         },
         {
@@ -34,13 +36,15 @@
             "link": "/#summary", 
             "text": "Why Attend?", 
             "title": "Why Attend?", 
-            "type": "summary",
+            "type": "keywordtext",
             "image": "", 
             "imagePosition": "right",
             "content":{
                 "title": "Why attend one of our Software Testing courses?",
-                "text1": "For certified or customised courses, we have expert trainers. <a href=/courses>Our courses</a> are practical, with many example programmes and tests to quickly bring you up to speed in software testing testing.",
-                "text2": "From the outset, our participants learn to:",
+                "text":[
+                    "For certified or customised courses, we have expert trainers. <a href=/courses>Our courses</a> are practical, with many example programmes and tests to quickly bring you up to speed in software testing testing.",
+                    "From the outset, our participants learn to:"
+                ],
                 "list":[
                     "Promote efficient and effective communication through a common vocabulary for software testing.", 
                     "Demonstrate understanding of fundamental software testing concepts and optimising test practices.", 
@@ -50,7 +54,9 @@
                     "Understand the value that software testing brings to stakeholders, and contribute effectively in reviews.",
                     "Assist in the selection and implementation process of testing tools"
                 ],
-                "text3": "We also offer advanced training for experienced sales people responsible for managing, retaining and expanding business with key accounts. If there is a newly recruited field or office-based salesperson that requires an initial training support programme to accelerate their performance, then we have the answer."
+                "text2":[
+                    "We also offer advanced training for experienced sales people responsible for managing, retaining and expanding business with key accounts. If there is a newly recruited field or office-based salesperson that requires an initial training support programme to accelerate their performance, then we have the answer."
+                ]
             }
         } 
     ] 
