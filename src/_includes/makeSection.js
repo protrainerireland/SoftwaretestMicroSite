@@ -177,10 +177,9 @@ module.exports = {
                 } catch(error) {
                     text = `<ul></ul>`;
                     console.log(`***** metadata error section.content.text is missing - keywordtext *****`);  
+
                 }
 
-                let defaultTemplate = `${site.searchKeywords[0]} is one of the most popular coding languages in the world. The job market for ${ site.searchKeywords[0] } developers is robust and consistent, making it a great programming language to learn. Our courses can give you the skills you need to work effectively with ${ site.searchKeywords[0] }.  Why attend one of our ${ site.searchKeywords[0] } courses? If you're interested working effectively with ${ site.searchKeywords[0] } to benefit your organisation and to get an edge over your competitors, or simply to learn a highly lucrative skill then you should consider our ${ site.searchKeywords[0] } training course.</p>`
-                
                 html = `<section id="${section.id}" class="section">
                     <div class="container">
                     <h3 class="title text-center">${ section.title }</h3>
@@ -194,8 +193,6 @@ module.exports = {
                         ${text}
                         
                         ${list}
-
-                        ${text2}
 
                         </div>`;
 
@@ -216,6 +213,8 @@ module.exports = {
                 </section>`;
                 break;
 
+            
+
             case "summary":
 
                 try {
@@ -230,9 +229,11 @@ module.exports = {
 
                 } catch(error) {
                     text = `<ul></ul>`;
-                    console.log(`***** metadata error section.content.list is missing - keywordtext *****`);  
+                    console.log(`***** metadata error section.content.text is missing - keywordtext *****`);  
 
                 }
+
+                let defaultTemplate = `${site.searchKeywords[0]} is one of the most popular coding languages in the world. The job market for ${ site.searchKeywords[0] } developers is robust and consistent, making it a great programming language to learn. Our courses can give you the skills you need to work effectively with ${ site.searchKeywords[0] }.  Why attend one of our ${ site.searchKeywords[0] } courses? If you're interested working effectively with ${ site.searchKeywords[0] } to benefit your organisation and to get an edge over your competitors, or simply to learn a highly lucrative skill then you should consider our ${ site.searchKeywords[0] } training <a href=/courses>courses</a>.</p>`
                 
                 html = `<section id="${section.id}" class="section">
                     <div class="container">
@@ -244,9 +245,7 @@ module.exports = {
                         >
                         <p class="about-title">${ section.content.title }</p>
                         
-                        ${text}
-                        
-                        ${list}
+                        ${ defaultTemplate }
                         
                         </div>`;
                     if (section.image) {
@@ -271,7 +270,7 @@ module.exports = {
                 let quotes = section.content.quotes.map((quote, index) => `<div class="col-md-5 testimonials" data-aos="fade-left" data-aos-delay="${ site.animation.delay * (index + 1) }" ${animationOffset}>
                     <p class="feedback">"${quote.text}"</p>
                     <img src="${quote.image}"  alt="">
-                    <p class="user-details"><b>${quote.name}</b><br>${ quote.jobtitle }</p>
+                    <p class="user-details"><b>${quote.name}</b>
                     </div>`).join("");
 
                 html = `<section id="${ section.id }" class="section">
