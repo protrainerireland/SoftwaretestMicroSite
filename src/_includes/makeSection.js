@@ -177,19 +177,6 @@ module.exports = {
                 } catch(error) {
                     text = `<ul></ul>`;
                     console.log(`***** metadata error section.content.text is missing - keywordtext *****`);  
-<<<<<<< HEAD
-
-                }
-
-                try {
-                    text2 = `<ul>${section.content.text2.map(item=>`<p>${item}</p>`).join("")}</ul>`;
-
-                } catch(error) {
-                    text2 = `<ul></ul>`;
-                    console.log(`***** metadata error section.content.text2 is missing - keywordtext *****`);  
-=======
->>>>>>> 73ae52c3737501bc0189ad99266d2613d7cb51de
-
                 }
 
                 let defaultTemplate = `${site.searchKeywords[0]} is one of the most popular coding languages in the world. The job market for ${ site.searchKeywords[0] } developers is robust and consistent, making it a great programming language to learn. Our courses can give you the skills you need to work effectively with ${ site.searchKeywords[0] }.  Why attend one of our ${ site.searchKeywords[0] } courses? If you're interested working effectively with ${ site.searchKeywords[0] } to benefit your organisation and to get an edge over your competitors, or simply to learn a highly lucrative skill then you should consider our ${ site.searchKeywords[0] } training course.</p>`
