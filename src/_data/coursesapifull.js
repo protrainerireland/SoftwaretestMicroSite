@@ -1,6 +1,5 @@
-const fetch = require("node-fetch");
 
-const Cache = require("@11ty/eleventy-cache-assets");
+const Cache = require("@11ty/eleventy-fetch");
 const fs = require('fs');
 
 
@@ -25,6 +24,7 @@ module.exports = async function() {
   distinctCourseList = json.flatMap(keyword => keyword.courses)
                            .filter((course, index, courses) => courses.findIndex(c=>c.id==course.id) == index);
 
+  // keywords keep their real names ("C#"); they are URL-encoded when sent to the API below
   let distinctMicrositeKeywordList = json.flatMap(keyword=> keyword.microsite_keywords)
                           .filter((mskeyword, index, list) => list.indexOf(mskeyword) == index)
                           .filter((mskeyword)=>mskeyword != "");
@@ -65,7 +65,26 @@ module.exports = async function() {
     }
   });
 
-  url = `http://professional.ie/api/getLandingPageTextForKeywords.php?keywords[]=${distinctMicrositeKeywordList.join("&keywords[]=")}`;
+  // courses in the course groups named in site.json "featuredGroups" go first on the
+  // Courses and Schedule pages, group by group in that order; everything else keeps
+  // the API's order (as does each course within its group)
+  let normalise = text => String(text || "").replace(/&amp;/g, "&").trim().toLowerCase();
+  let featuredGroups = (site.featuredGroups || []).map(normalise);
+  let featuredRank = course => {
+    let rank = featuredGroups.indexOf(normalise(course.group));
+    return rank == -1 ? featuredGroups.length : rank;
+  };
+  featuredGroups.forEach((group, i) => {
+    if (!distinctCourseListWithSchedule.some(course => featuredRank(course) == i)) {
+      console.warn(`[featuredGroups] no courses in a group called "${site.featuredGroups[i]}" - check the name in site.json`);
+    }
+  });
+  let coursesFeaturedFirst = distinctCourseListWithSchedule
+    .map((course, index) => ({ course, index }))
+    .sort((a, b) => featuredRank(a.course) - featuredRank(b.course) || a.index - b.index)
+    .map(item => item.course);
+
+  url = `http://professional.ie/api/getLandingPageTextForKeywords.php?keywords[]=${distinctMicrositeKeywordList.map(encodeURIComponent).join("&keywords[]=")}`;
 
   console.log(url);
 
@@ -75,13 +94,17 @@ module.exports = async function() {
   });
 
 
+  // the API can return the same keyword more than once, which creates duplicate pages
+  json = json.filter((keyword, index, list) =>
+    list.findIndex(k => k.keyword.toLowerCase() == keyword.keyword.toLowerCase()) == index);
+
   let msKeywordData = json.map(keyword=> {
    
     //console.log(keyword);
     return {
       keyword: keyword.keyword, 
       paragraphs: keyword.paragraphs, 
-      courses: distinctCourseList.filter(course=>course.searchWords.includes(keyword.keyword)), 
+      courses: distinctCourseListWithSchedule.filter(course=>course.searchWords.includes(keyword.keyword)), 
     }
   });
 
@@ -114,7 +137,7 @@ module.exports = async function() {
   });
 
   return {
-    courses: distinctCourseListWithSchedule, 
+    courses: coursesFeaturedFirst,
     micrositeKeywords: json,
     relatedKeywords: distinctMicrositeKeywordList,
     msKeywordData, 

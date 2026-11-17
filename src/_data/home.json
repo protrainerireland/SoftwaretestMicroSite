@@ -1,64 +1,60 @@
 {
-    "sections":[
+    "sections": [
         {
             "id": "top",
-            "link": "/#top", 
-            "text": "Home",  
+            "link": "/",
+            "text": "Home",
             "type": "placeholder"
-        }, 
-        {
-            "id": "banner", 
-            "link": "no", 
-            "type": "banner", 
-            "title": "Software Testing Training Courses Ireland", 
-            "subtitle": "Contact us for all your Software Testing training requirements", 
-            "background": "img/ground@-min.png",
-            "image": "svg/software.svg"
         },
         {
-            "id": "keywordtext",
-            "link": "/#keywordtext", 
-            "text": "About", 
-            "title": "About", 
-            "type": "keywordtext",
-            "image": "/svg/Code Version Control.svg", 
-            "imagePosition": "right",
-            "content":{
-                "title": "A critical function...",
-                "text":[
-                    "Software Testing is a critical function within businesses and Software testers play a critical role in application development. They are quality assurance experts who put applications through the wringer to root out bugs, poor performance and interface issues.",
-                    "A career in software testing is very challenging but satisfying, requiring you to problem solve, manage risk and improve the quality of all phases of the software development cycle."
-                ] 
+            "id": "banner",
+            "link": "no",
+            "type": "banner",
+            "title": "Software Testing Training Courses Ireland",
+            "subtitle": "Practical, instructor-led training in-person at our Dublin, Cork and Limerick offices, at your premises nationwide or live online. Learn to plan, design and automate tests that catch defects early, from ISTQB certification to Selenium, Cucumber and test-driven development.",
+            "illustration": {
+                "src": "/img/undraw-fixing-bugs.svg?v=1",
+                "width": 960,
+                "height": 719
             }
         },
         {
-            "id": "summary",
-            "link": "/#summary", 
-            "text": "Why Attend?", 
-            "title": "Why Attend?", 
-            "type": "keywordtext",
-            "image": "", 
-            "imagePosition": "right",
-            "imageWidth": 300, 
-            "content":{
-                "title": "Why attend one of our Software Testing courses?",
-                "text":[
-                    "For certified or customised courses, we have expert trainers. <a href=/courses>Our courses</a> are practical, with many example programmes and tests to quickly bring you up to speed in software testing testing.",
-                    "From the outset, our participants learn to:"
-                ],
-                "list":[
-                    "Promote efficient and effective communication through a common vocabulary for software testing.", 
-                    "Demonstrate understanding of fundamental software testing concepts and optimising test practices.", 
-                    "Use established techniques for designing tests at all test levels, and interpreting tests from test specifications.", 
-                    "Report on test results, including defect reports.", 
-                    "Understand test management principles, and project factors, for resources, strategies, and planning.", 
-                    "Understand the value that software testing brings to stakeholders, and contribute effectively in reviews.",
-                    "Assist in the selection and implementation process of testing tools"
-                ],
-                "text2":[
-                    "We also offer advanced training for experienced sales people responsible for managing, retaining and expanding business with key accounts. If there is a newly recruited field or office-based salesperson that requires an initial training support programme to accelerate their performance, then we have the answer."
-                ]
+            "id": "about",
+            "link": "/#about",
+            "text": "About",
+            "title": "About our Software Testing courses",
+            "type": "text",
+            "content": [
+                "Software testers play a critical role in application development. They are the quality experts who put applications through their paces to find bugs, poor performance and usability issues before customers do. Good testing manages risk and improves the quality of every phase of the software development cycle.",
+                "Our instructor-led <a href=/courses/>courses</a> are practical, with plenty of worked examples and hands-on exercises. You will learn a common vocabulary for testing, proven techniques for designing tests at every level, and how to report defects and results clearly. We run accredited ISTQB certification courses from Foundation to Advanced level, as well as hands-on courses in test automation, unit testing, exploratory testing and user acceptance testing."
+            ],
+            "illustration": {
+                "src": "/img/undraw-lecture.svg?v=1",
+                "width": 800,
+                "height": 693
             }
-        } 
-    ] 
+        },
+        {
+            "id": "testimonials",
+            "link": "/#testimonials",
+            "type": "quotes",
+            "title": "What our attendees say",
+            "content": {
+                "quotes": []
+            },
+            "text": "Testimonials"
+        },
+        {
+            "id": "get-started",
+            "link": "no",
+            "type": "cta",
+            "title": "Find the right Software Testing course for you",
+            "content": "From a one-day user acceptance testing workshop to in-depth ISTQB certification and test automation courses for testers, developers and QA teams. See what each course covers, then book a date in Dublin, Cork or live online.",
+            "actions": [
+                { "text": "Browse courses", "link": "/courses/" },
+                { "text": "See course dates", "link": "/schedule/" }
+            ],
+            "note": "Training a team? We can run any course at your premises or online, on dates that suit you. <a href=\"#contact\">Contact us</a>"
+        }
+    ]
 }

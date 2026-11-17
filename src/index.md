@@ -1,7 +1,6 @@
 ---
 layout: homepage_layout
-title: Report Writing Training Courses | Dublin Cork Limerick Ireland
-page:
-    type: home
+title: Software Testing Training Courses | Dublin Cork Limerick Ireland
+pageType: home
 ---
 
